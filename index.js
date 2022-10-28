@@ -1,6 +1,6 @@
 let modalContainer = document.createElement("div");
 let returnMsg = document.getElementById("rtMsg");
-
+let yes = document.createElement("button");
 const ModalGenerator = (message) => {
   modalContainer.classList.add("modal");
 
@@ -17,10 +17,8 @@ const ModalGenerator = (message) => {
   let btnWraps = document.createElement("div");
   btnWraps.classList.add("footer");
 
-  let yes = document.createElement("button");
   yes.setAttribute("id", "yes");
   yes.innerText = "Yes";
-  yes.addEventListener("click" ) = 
 
   let no = document.createElement("button");
   no.setAttribute("id", "no");
@@ -46,16 +44,21 @@ btn.onclick = function () {
   ModalGenerator("Are yous sure you want continues");
 };
 
-document.addEventListener("click", function (e) {
-  if (e.target && e.target.id == "yes") {
-    modalContainer.style.display = "none";
-    returnMsg.innerText = "You just clicked Yes";
-  }
-});
+yes.onclick = function name() {
+  console.log("testing");
+  modalContainer.remove();
+};
 
-document.addEventListener("click", function (e) {
-  if (e.target && e.target.id == "no") {
-    modalContainer.style.display = "none";
-    returnMsg.innerText = "You just clicked Cancel";
-  }
-});
+// document.addEventListener("click", function (e) {
+//   if (e.target && e.target.id == "yes") {
+//     modalContainer.style.display = "none";
+//     returnMsg.innerText = "You just clicked Yes";
+//   }
+// });
+
+// document.addEventListener("click", function (e) {
+//   if (e.target && e.target.id == "no") {
+//     modalContainer.style.display = "none";
+//     returnMsg.innerText = "You just clicked Cancel";
+//   }
+// });
